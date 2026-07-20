@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gallery | vaarsha</title>
+    <link
+      rel="preload"
+      href="Elms_Sans/fonts%20compressed/ElmsSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css?v=2026071901" />
+  </head>
+  <body>
+    <main>
+      <section class="screen gallery" id="gallery" aria-labelledby="gallery-title">
+        <nav class="nav" aria-label="Primary">
+          <a class="home-bird-link" href="index.html" aria-label="Home">
+            <img
+              src="logo/logo.png"
+              alt=""
+            />
+          </a>
+          <div class="nav-item gallery-menu">
+            <a href="gallery.html">gallery</a>
+            <div class="gallery-dropdown" aria-label="Gallery sections">
+              <a href="#paintings">paintings</a>
+              <a href="#ceramics">ceramics</a>
+              <a href="#florals">florals</a>
+              <a href="#whimsy">crafts &amp; whimsy</a>
+            </div>
+          </div>
+          <a href="shop.html">shop</a>
+          <a href="writing.html">writing</a>
+          <a href="me.html">me</a>
+        </nav>
+
+        <h2 id="gallery-title">gallery</h2>
+        <div class="stripe-stack gallery-stripes" aria-hidden="true">
+          <span class="stripe stripe-teal"></span>
+          <span class="stripe stripe-brown"></span>
+          <span class="stripe stripe-coral"></span>
+        </div>
+
+        <h3 class="section-label paintings-label" id="paintings">paintings</h3>
+        <div class="art-grid paintings-grid">
+          <article class="art-card">
+            <img
+              src="gallery/joey.png"
+              alt="Joey, gouache on paper"
+            />
+            <p><span>joey</span>gouache on paper, 2025</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/viv%20%26%20josephine.png"
+              alt="Viv and Josephine, gouache on paper"
+            />
+            <p><span>viv &amp; josephine</span>gouache on paper, 2023</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/the%20search.png"
+              alt="The Search, acrylic on canvas"
+            />
+            <p><span>the search</span>acrylic on canvas, 2024</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/embroidered%20canvas.png"
+              alt="Waiting, embroidery and acrylic paint on canvas"
+            />
+            <p>
+              <span>waiting</span>embroidery and acrylic on canvas, 2023
+            </p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/hamel.png"
+              alt="Dancer, gouache on paper"
+            />
+            <p><span>dancer</span>gouache on paper, 2021</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/mistake.png"
+              alt="Mistake, gouache on canvas"
+            />
+            <p><span>mistake</span>gouache on canvas, 2023</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/self%20portrait.png"
+              alt="Self portrait, oil pastel on paper"
+            />
+            <p><span>self portrait</span>oil pastel on paper, 2022</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/octopus.png"
+              alt="Octopus, gouache on paper"
+            />
+            <p><span>octopus</span>gouache on paper, 2022</p>
+          </article>
+        </div>
+
+        <h3 class="section-label ceramics-label" id="ceramics">ceramics</h3>
+        <div class="art-grid ceramics-grid">
+          <article class="art-card">
+            <img
+              src="gallery/ceramics/flower%20vase.jpeg"
+              alt="Flower vase ceramic"
+            />
+            <p><span>flower vase</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/ceramics/red%20collection.jpeg"
+              alt="Red ceramic collection"
+            />
+            <p><span>red collection</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/ceramics/tea%20light.jpeg"
+              alt="Tea light ceramic"
+            />
+            <p><span>tea light</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/ceramics/woman.jpeg"
+              alt="Woman ceramic"
+            />
+            <p><span>woman</span></p>
+          </article>
+        </div>
+        <h3 class="section-label florals-label" id="florals">florals</h3>
+        <div class="art-grid florals-grid">
+          <article class="art-card carousel-card">
+            <div
+              class="carousel"
+              data-carousel
+              data-images="gallery/florals/red%20vase%20june%202026/1.JPG,gallery/florals/red%20vase%20june%202026/2.JPG,gallery/florals/red%20vase%20june%202026/3.JPG"
+            >
+              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
+                ‹
+              </button>
+              <img
+                src="gallery/florals/red%20vase%20june%202026/1.JPG"
+                alt="Red vase floral arrangement"
+                data-carousel-image
+              />
+              <button class="carousel-button next" type="button" aria-label="Next floral image">
+                ›
+              </button>
+            </div>
+          </article>
+          <article class="art-card carousel-card">
+            <div
+              class="carousel"
+              data-carousel
+              data-images="gallery/florals/blue%20vase%20june%202026/1.JPG,gallery/florals/blue%20vase%20june%202026/2.JPG,gallery/florals/blue%20vase%20june%202026/3.JPG,gallery/florals/blue%20vase%20june%202026/4.JPG,gallery/florals/blue%20vase%20june%202026/5.JPG"
+            >
+              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
+                ‹
+              </button>
+              <img
+                src="gallery/florals/blue%20vase%20june%202026/1.JPG"
+                alt="Blue vase floral arrangement"
+                data-carousel-image
+              />
+              <button class="carousel-button next" type="button" aria-label="Next floral image">
+                ›
+              </button>
+            </div>
+          </article>
+          <article class="art-card carousel-card">
+            <div
+              class="carousel"
+              data-carousel
+              data-images="gallery/florals/baby%20bouquet%20june%202026/1.JPG,gallery/florals/baby%20bouquet%20june%202026/2.JPG"
+            >
+              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
+                ‹
+              </button>
+              <img
+                src="gallery/florals/baby%20bouquet%20june%202026/1.JPG"
+                alt="Baby bouquet floral arrangement"
+                data-carousel-image
+              />
+              <button class="carousel-button next" type="button" aria-label="Next floral image">
+                ›
+              </button>
+            </div>
+          </article>
+        </div>
+        <h3 class="section-label whimsy-label" id="whimsy">crafts &amp; whimsy</h3>
+        <div class="art-grid whimsy-grid">
+          <article class="art-card">
+            <img
+              src="gallery/crafts/over%20the%20garden%20wall.png"
+              alt="Over the Garden Wall craft"
+            />
+            <p><span>over the garden wall</span>polymer clay and paint, 2023</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/crafts/selfie.png?v=202607171912"
+              alt="Selfie craft"
+            />
+            <p><span>selfie</span>block print and ink, 2023</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/crafts/treason.jpeg"
+              alt="Treason block print"
+            />
+            <p><span>treason</span>block print and ink, 2023</p>
+          </article>
+          <article class="art-card">
+            <img
+              src="gallery/crafts/tie%20embroidery.jpeg"
+              alt="Birds embroidery on fabric"
+            />
+            <p><span>birds</span>embroidery on fabric, 2026</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const image = carousel.querySelector("[data-carousel-image]");
+        const images = carousel.dataset.images.split(",");
+        let index = 0;
+
+        const showImage = (direction) => {
+          index = (index + direction + images.length) % images.length;
+          image.src = images[index];
+        };
+
+        carousel.querySelector(".prev").addEventListener("click", () => showImage(-1));
+        carousel.querySelector(".next").addEventListener("click", () => showImage(1));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Black.woff2') format('woff2'),
+        url('ElmsSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-ThinItalic.woff2') format('woff2'),
+        url('ElmsSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Thin.woff2') format('woff2'),
+        url('ElmsSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-BlackItalic.woff2') format('woff2'),
+        url('ElmsSans-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Bold.woff2') format('woff2'),
+        url('ElmsSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-BoldItalic.woff2') format('woff2'),
+        url('ElmsSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-ExtraBold.woff2') format('woff2'),
+        url('ElmsSans-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('ElmsSans-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-ExtraLight.woff2') format('woff2'),
+        url('ElmsSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-ExtraLightItalic.woff2') format('woff2'),
+        url('ElmsSans-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Italic.woff2') format('woff2'),
+        url('ElmsSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Light.woff2') format('woff2'),
+        url('ElmsSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-LightItalic.woff2') format('woff2'),
+        url('ElmsSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Medium.woff2') format('woff2'),
+        url('ElmsSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-MediumItalic.woff2') format('woff2'),
+        url('ElmsSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-Regular.woff2') format('woff2'),
+        url('ElmsSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-SemiBold.woff2') format('woff2'),
+        url('ElmsSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elms Sans';
+    src: url('ElmsSans-SemiBoldItalic.woff2') format('woff2'),
+        url('ElmsSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+

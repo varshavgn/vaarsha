@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Preview | Vaarsha</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        align-items: center;
+        background: #2c2c2c;
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .phone {
+        background: #111;
+        border: 12px solid #111;
+        border-radius: 42px;
+        box-shadow: 0 24px 80px rgb(0 0 0 / 40%);
+        height: 852px;
+        overflow: hidden;
+        position: relative;
+        width: 393px;
+      }
+
+      .notch {
+        background: #111;
+        border-radius: 0 0 18px 18px;
+        height: 28px;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 124px;
+        z-index: 2;
+      }
+
+      iframe {
+        background: #fffdf2;
+        border: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="notch" aria-hidden="true"></div>
+      <iframe src="index.html" title="iPhone-sized website preview"></iframe>
+    </div>
+  </body>
+</html>

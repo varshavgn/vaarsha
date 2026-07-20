@@ -1,0 +1,1375 @@
+:root {
+  --cream: #fffdf2;
+  --shop-cream: #fefae0;
+  --ink: #3f292b;
+  --teal: #679289;
+  --coral: #db7f67;
+  --font: "Elms Sans", "Elms_Sans", "Elms Sans Regular",
+    "Arial Rounded MT Bold", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Elms Sans";
+  src: local("Elms Sans"), local("ElmsSans-Regular"),
+    url("Elms_Sans/fonts%20compressed/ElmsSans-Regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Elms Sans";
+  src: local("Elms Sans Italic"), local("ElmsSans-Italic"),
+    url("Elms_Sans/fonts%20compressed/ElmsSans-Italic.woff2")
+    format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font);
+  margin: 0;
+}
+
+body.home-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+.home-page main {
+  min-height: calc(100vh + 96px);
+}
+
+.screen {
+  background: var(--cream);
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: 100vh;
+  padding: 42px 80px;
+  position: relative;
+}
+
+.screen h1,
+.screen h2,
+.screen h3,
+.screen p {
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: 26px;
+  justify-content: flex-end;
+  position: absolute;
+  right: 91px;
+  top: 42px;
+  width: 500px;
+  z-index: 1000;
+}
+
+.nav a {
+  font-size: 28px;
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1002;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--coral);
+}
+
+.nav-item {
+  position: relative;
+  z-index: 1001;
+}
+
+.gallery-menu {
+  align-items: flex-start;
+  display: flex;
+}
+
+.gallery-dropdown {
+  background: var(--cream);
+  display: grid;
+  gap: 4px;
+  left: 0;
+  min-width: 150px;
+  opacity: 0;
+  padding: 4px 0 8px;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-4px);
+  transition: opacity 140ms ease, transform 140ms ease;
+  z-index: 1003;
+}
+
+.gallery-dropdown a {
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+
+.gallery-menu:hover .gallery-dropdown,
+.gallery-menu:focus-within .gallery-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.home-bird-link {
+  align-items: center;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  padding: 0;
+  width: 48px;
+}
+
+.home-bird-link img {
+  display: block;
+  height: 48px;
+  object-fit: contain;
+  width: 48px;
+}
+
+.home-bird-link:hover img,
+.home-bird-link:focus-visible img {
+  transform: translateY(-2px);
+}
+
+.home {
+  height: calc(100vh + 96px);
+  min-height: 816px;
+}
+
+.home-title {
+  font-size: 48px;
+  left: 80px;
+  position: absolute;
+  top: 306px;
+}
+
+.home-tagline {
+  font-size: 48px;
+  position: absolute;
+  right: 92px;
+  top: 512px;
+}
+
+.stripe-stack {
+  display: grid;
+  gap: 5px;
+}
+
+.stripe {
+  display: block;
+  height: 15px;
+}
+
+.stripe-brown {
+  background: var(--ink);
+  height: 14px;
+}
+
+.stripe-coral {
+  background: var(--coral);
+}
+
+.stripe-teal {
+  background: var(--teal);
+}
+
+.home-stripes {
+  left: 80px;
+  position: absolute;
+  top: 403px;
+  width: calc(100% - 169px);
+}
+
+.bird {
+  height: 160px;
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  width: 160px;
+  z-index: 2;
+}
+
+.bird-top {
+  top: 243px;
+  transform: translateX(-50%);
+}
+
+.bird-bottom {
+  top: 459px;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.gallery {
+  min-height: auto;
+  padding-bottom: 220px;
+}
+
+.gallery h2,
+.shop h2,
+.writing h2,
+.me h2 {
+  font-size: 48px;
+  left: 80px;
+  position: absolute;
+  top: 109px;
+}
+
+.gallery-stripes,
+.shop-stripes,
+.writing-stripes,
+.me-stripes {
+  left: 80px;
+  position: absolute;
+  top: 186px;
+  width: calc(100% - 171px);
+}
+
+.section-label {
+  font-size: 36px;
+  left: 80px;
+  position: absolute;
+}
+
+.paintings-label {
+  top: 278px;
+}
+
+.ceramics-label {
+  top: 1624px;
+}
+
+.florals-label {
+  top: 2110px;
+}
+
+.whimsy-label {
+  top: 2660px;
+}
+
+.art-grid {
+  display: grid;
+  gap: 23px;
+  position: absolute;
+}
+
+.paintings-grid {
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: space-between;
+  left: 80px;
+  top: 352px;
+  width: calc(100% - 171px);
+}
+
+.study-grid {
+  grid-template-columns: repeat(3, 265px);
+  left: 80px;
+  top: 856px;
+  gap: 29px;
+}
+
+.ceramics-grid {
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: space-between;
+  left: 80px;
+  top: 1698px;
+  width: calc(100% - 171px);
+}
+
+.florals-grid {
+  gap: 59.5px;
+  grid-template-columns: repeat(3, 330px);
+  left: 80px;
+  top: 2180px;
+}
+
+.whimsy-grid {
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: space-between;
+  left: 80px;
+  top: 2734px;
+  width: calc(100% - 171px);
+}
+
+.gallery .section-label,
+.gallery .art-grid {
+  left: auto;
+  position: static;
+  top: auto;
+}
+
+.gallery .section-label {
+  margin-top: 90px;
+}
+
+.gallery .paintings-label {
+  margin-top: 236px;
+}
+
+.gallery .art-grid {
+  margin-top: 28px;
+  width: calc(100% - 11px);
+}
+
+.art-card {
+  min-height: 337px;
+  position: relative;
+}
+
+.art-card img {
+  background: var(--teal);
+  display: block;
+  height: 320px;
+  margin: 9px 0 0;
+  object-fit: cover;
+  width: 243px;
+}
+
+.art-card.landscape-card img,
+.carousel img {
+  height: 223px;
+  width: 330px;
+}
+
+.carousel {
+  align-items: center;
+  display: flex;
+  margin: 9px 0 0;
+  position: relative;
+  width: 330px;
+}
+
+.carousel img {
+  margin: 0;
+  object-fit: cover;
+}
+
+.carousel-button {
+  align-items: center;
+  background: rgb(255 253 242 / 70%);
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font);
+  font-size: 28px;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  z-index: 2;
+}
+
+.carousel-button.prev {
+  left: 4px;
+}
+
+.carousel-button.next {
+  right: 4px;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  color: var(--coral);
+}
+
+.art-card p {
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  margin: 0;
+  padding-top: 15px;
+  text-align: right;
+  width: 243px;
+}
+
+.art-card p span {
+  display: block;
+}
+
+.placeholder {
+  background: var(--teal);
+  height: 337px;
+}
+
+.placeholder.tall {
+  height: 342px;
+}
+
+.shop,
+.writing {
+  min-height: 1547px;
+}
+
+.writing-index {
+  min-height: auto;
+  padding-bottom: 160px;
+  padding-top: 295px;
+}
+
+.writing-preview,
+.writing-piece {
+  color: var(--ink);
+  font-family: var(--font);
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+
+.writing-preview {
+  margin: 0 0 72px 80px;
+  max-width: 760px;
+  width: calc(100% - 171px);
+}
+
+.writing-preview h3,
+.writing-piece h1 {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+.writing-preview h3 a:hover,
+.writing-preview h3 a:focus-visible {
+  color: var(--coral);
+}
+
+.writing-body,
+.writing-piece {
+  font-size: 18px;
+}
+
+.writing-body p,
+.writing-piece p {
+  font-family: georgia, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.writing-body p,
+.writing-piece p {
+  margin: 0 0 18px;
+}
+
+.show-more {
+  margin-top: 10px;
+}
+
+.show-more summary,
+.show-less {
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 20px;
+  font-family: var(--font);
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  list-style: none;
+  margin-bottom: 18px;
+  padding: 0;
+}
+
+.show-more summary {
+  display: inline-block;
+}
+
+.show-less {
+  display: block;
+  margin-top: 10px;
+}
+
+.show-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.show-more summary:hover,
+.show-more summary:focus-visible,
+.show-less:hover,
+.show-less:focus-visible {
+  color: var(--coral);
+}
+
+.show-more[open] summary {
+  display: none;
+}
+
+.writing-piece-page {
+  min-height: auto;
+  padding-bottom: 120px;
+}
+
+.writing-piece {
+  margin: 170px auto 0;
+  max-width: 820px;
+  width: calc(100% - 160px);
+}
+
+.construction-logo {
+  display: block;
+  left: 50%;
+  max-width: 900px;
+  position: absolute;
+  top: 260px;
+  transform: translateX(-50%);
+  width: 70vw;
+}
+
+.footer-stripes {
+  bottom: 119px;
+  left: 80px;
+  position: absolute;
+  width: calc(100% - 169px);
+}
+
+.me {
+  min-height: 880px;
+}
+
+.me-intro-frame {
+  height: auto;
+  left: 80px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 252px;
+  width: 400px;
+  z-index: 2;
+}
+
+.me-intro-frame img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+.me-intro-text {
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 400;
+  left: 80px;
+  letter-spacing: -0.03em;
+  line-height: 1.28;
+  position: absolute;
+  top: 360px;
+  width: 400px;
+}
+
+.me-intro-text p {
+  margin: 0 0 18px;
+}
+
+.portrait-frame {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 91px;
+  top: 264px;
+  width: 504px;
+}
+
+.portrait-frame img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (min-width: 981px) and (max-width: 1276px) {
+  .gallery {
+    min-height: auto;
+  }
+
+  .florals-grid {
+    grid-template-columns: repeat(auto-fit, 330px);
+    justify-content: space-between;
+    width: calc(100% - 171px);
+  }
+}
+
+@media (max-width: 699px) {
+  .me {
+    min-height: 1320px;
+  }
+
+  .me-intro-frame {
+    left: 28px;
+    top: 260px;
+    width: min(calc(100% - 56px), 440px);
+  }
+
+  .portrait-frame {
+    left: 28px;
+    right: auto;
+    top: 390px;
+    width: min(calc(100% - 56px), 504px);
+  }
+
+  .me-intro-text {
+    left: 28px;
+    top: calc(390px + min(calc(100vw - 56px), 504px) + 48px);
+    width: min(calc(100% - 56px), 560px);
+  }
+}
+
+@media (max-width: 980px) {
+  .screen {
+    max-width: none;
+    min-height: auto;
+    padding: 32px 28px 96px;
+  }
+
+  .nav {
+    gap: 14px;
+    justify-content: flex-end;
+    margin-left: auto;
+    position: relative;
+    width: min(100%, 500px);
+  }
+
+  .nav a {
+    font-size: clamp(18px, 4.8vw, 28px);
+  }
+
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 780px;
+  }
+
+  .home-title,
+  .home-tagline,
+  .gallery h2,
+  .shop h2,
+  .writing h2,
+  .me h2,
+  .section-label,
+  .home-stripes,
+  .gallery-stripes,
+  .shop-stripes,
+  .writing-stripes,
+  .me-stripes,
+  .footer-stripes,
+  .bird,
+  .art-grid,
+  .construction-logo,
+  .me-intro-frame,
+  .me-intro-text,
+  .portrait-frame {
+    position: static;
+  }
+
+  .shop-stripes {
+    left: 28px;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .writing-stripes {
+    left: 28px;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .shop h2 {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 109px;
+  }
+
+  .home-title {
+    order: 1;
+  }
+
+  .bird-top {
+    order: 2;
+  }
+
+  .home-stripes {
+    order: 3;
+  }
+
+  .bird-bottom {
+    order: 4;
+  }
+
+  .home-tagline {
+    order: 5;
+  }
+
+  .home-title,
+  .gallery h2,
+  .shop h2,
+  .writing h2,
+  .me h2 {
+    font-size: clamp(40px, 12vw, 54px);
+    margin-top: 80px;
+  }
+
+  .gallery h2 {
+    margin-bottom: 15px;
+  }
+
+  .home-tagline {
+    font-size: clamp(36px, 10vw, 48px);
+    margin-top: 48px;
+    text-align: right;
+  }
+
+  .home-stripes,
+  .gallery-stripes,
+  .footer-stripes {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .bird {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .bird-top {
+    margin-top: 48px;
+    transform: none;
+  }
+
+  .bird-bottom {
+    margin-top: 4px;
+    transform: rotate(180deg);
+  }
+
+  .home .home-stripes {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 403px;
+    width: calc(100% - 56px);
+  }
+
+  .home .nav {
+    margin-left: 0;
+    position: absolute;
+    right: 28px;
+    top: 42px;
+    width: min(100% - 56px, 500px);
+  }
+
+  .home .home-title,
+  .home .home-tagline {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .home .home-title {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 306px;
+  }
+
+  .home .home-tagline {
+    margin-top: 0;
+    position: absolute;
+    right: 28px;
+    text-align: right;
+    top: 512px;
+  }
+
+  .home .bird {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+  }
+
+  .home .bird-top {
+    top: 243px;
+    transform: translateX(-50%);
+  }
+
+  .home .bird-bottom {
+    top: 459px;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .gallery {
+    min-height: auto;
+  }
+
+  .gallery h2 {
+    left: 28px;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 109px;
+  }
+
+  .gallery .nav {
+    margin-left: 0;
+    position: absolute;
+    right: 28px;
+    top: 42px;
+    width: min(100% - 56px, 500px);
+  }
+
+  .gallery-stripes {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .paintings-label {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 278px;
+  }
+
+  .paintings-label,
+  .ceramics-label,
+  .florals-label,
+  .whimsy-label {
+    margin-top: 52px;
+  }
+
+  .paintings-grid,
+  .ceramics-grid,
+  .study-grid,
+  .florals-grid,
+  .whimsy-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    justify-content: space-between;
+    margin-top: 28px;
+    row-gap: 48px;
+    width: 100%;
+  }
+
+  .gallery .paintings-grid {
+    margin-top: 28px;
+  }
+
+  .gallery .art-grid {
+    width: 100%;
+  }
+
+  .gallery .ceramics-grid {
+    margin-bottom: 0;
+    margin-top: 28px;
+  }
+
+  .florals-grid {
+    grid-template-columns: repeat(auto-fit, 330px);
+  }
+
+  .gallery .florals-label {
+    margin-top: 72px;
+  }
+
+  .gallery .ceramics-label,
+  .gallery .whimsy-label {
+    margin-top: 72px;
+  }
+
+  .study-grid {
+    margin-top: 64px;
+  }
+
+  .shop,
+  .writing {
+    min-height: 70vh;
+  }
+
+  .writing {
+    min-height: 900px;
+  }
+
+  .writing-index {
+    min-height: auto;
+    padding-bottom: 140px;
+    padding-top: 280px;
+  }
+
+  .writing-preview {
+    margin: 0 0 64px 28px;
+    max-width: none;
+    width: calc(100% - 56px);
+  }
+
+  .writing-preview h3,
+  .writing-piece h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .writing-body,
+  .writing-piece {
+    font-size: 17px;
+  }
+
+  .writing-piece {
+    margin-top: 150px;
+    width: calc(100% - 56px);
+  }
+
+  .construction-logo {
+    margin: 56px auto 0;
+    max-width: 800px;
+    transform: none;
+    width: min(76vw, 800px);
+  }
+
+  .shop {
+    min-height: 900px;
+  }
+
+  .shop h2 {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 109px;
+  }
+
+  .shop .nav {
+    margin-left: 0;
+    position: absolute;
+    right: 28px;
+    top: 42px;
+    width: min(100% - 56px, 500px);
+  }
+
+  .shop-stripes {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .writing-stripes {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .writing h2 {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 109px;
+  }
+
+  .writing .nav {
+    margin-left: 0;
+    position: absolute;
+    right: 28px;
+    top: 42px;
+    width: min(100% - 56px, 500px);
+  }
+
+  .me .nav {
+    margin-left: 0;
+    position: absolute;
+    right: 28px;
+    top: 42px;
+    width: min(100% - 56px, 500px);
+  }
+
+  .me h2 {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 109px;
+  }
+
+  .me-stripes {
+    left: 28px;
+    margin-top: 0;
+    position: absolute;
+    top: 186px;
+    width: calc(100% - 56px);
+  }
+
+  .shop .construction-logo {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 260px;
+    transform: translateX(-50%);
+    width: min(76vw, 800px);
+  }
+
+  .footer-stripes {
+    margin-top: 55vh;
+  }
+
+  .me {
+    min-height: 1320px;
+  }
+
+  .me-intro-frame {
+    left: 28px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 260px;
+    width: min(48vw, 360px);
+  }
+
+  .me-intro-text {
+    font-size: 18px;
+    left: 28px;
+    position: absolute;
+    top: calc(390px + min(calc(100vw - 56px), 504px) + 48px);
+    width: min(calc(100% - 56px), 560px);
+  }
+
+  .portrait-frame {
+    height: auto;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: auto;
+    top: 390px;
+    width: min(calc(100% - 56px), 504px);
+  }
+
+  .portrait-frame img {
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  .me {
+    min-height: 920px;
+  }
+
+  .me-intro-frame {
+    left: 28px;
+    top: 260px;
+    width: min(46vw, 400px);
+  }
+
+  .portrait-frame {
+    left: auto;
+    right: 28px;
+    top: 360px;
+    width: min(40vw, 420px);
+  }
+
+  .me-intro-text {
+    font-size: 17px;
+    left: 28px;
+    line-height: 1.24;
+    top: 360px;
+    width: min(calc(60vw - 96px), 460px);
+  }
+
+  .me-intro-text p {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 699px) {
+  .home .home-title,
+  .home .home-tagline {
+    font-size: clamp(30px, 5vw, 34px);
+  }
+
+  .home .home-tagline {
+    margin-top: 0;
+    top: 512px;
+  }
+}
+
+@media (max-width: 560px) {
+  .screen {
+    padding-inline: 20px;
+  }
+
+  .home .home-stripes {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .home .nav {
+    right: 20px;
+    top: 42px;
+    width: calc(100% - 40px);
+  }
+
+  .home .home-title,
+  .home .home-tagline {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .home .home-title {
+    left: 20px;
+    top: 306px;
+  }
+
+  .home .home-tagline {
+    right: 20px;
+    top: 512px;
+  }
+
+  .home .bird {
+    height: 92px;
+    width: 92px;
+  }
+
+  .home .bird-top {
+    top: 311px;
+  }
+
+  .home .bird-bottom {
+    top: 448px;
+  }
+
+  .home .stripe {
+    height: 12px;
+  }
+
+  .home .stripe-brown {
+    height: 11px;
+  }
+
+  .shop-stripes {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .writing-stripes {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .writing h2 {
+    left: 20px;
+    margin-top: 0;
+    top: 109px;
+  }
+
+  .writing .nav {
+    right: 20px;
+    top: 42px;
+    width: calc(100% - 40px);
+  }
+
+  .writing-preview {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .writing-preview h3,
+  .writing-piece h1 {
+    font-size: 28px;
+  }
+
+  .writing-body,
+  .writing-piece {
+    font-size: 16px;
+  }
+
+  .writing-piece {
+    margin-top: 150px;
+    width: calc(100% - 40px);
+  }
+
+  .me-stripes {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .gallery h2,
+  .paintings-label {
+    left: 20px;
+  }
+
+  .gallery .nav {
+    right: 20px;
+    top: 42px;
+    width: calc(100% - 40px);
+  }
+
+  .gallery-stripes {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .shop h2 {
+    left: 20px;
+    margin-top: 0;
+    top: 109px;
+  }
+
+  .shop .nav {
+    right: 20px;
+    top: 42px;
+    width: calc(100% - 40px);
+  }
+
+  .me h2 {
+    left: 20px;
+    margin-top: 0;
+    top: 109px;
+  }
+
+  .me .nav {
+    right: 20px;
+    top: 42px;
+    width: calc(100% - 40px);
+  }
+
+  .me-intro-frame {
+    left: 20px;
+    top: 250px;
+    width: calc(100% - 40px);
+  }
+
+  .me-intro-text {
+    left: 20px;
+    top: calc(350px + (100vw - 40px) + 48px);
+    width: calc(100% - 40px);
+  }
+
+  .portrait-frame {
+    left: 20px;
+    right: 20px;
+    top: 350px;
+    width: calc(100% - 40px);
+  }
+
+  .shop .construction-logo {
+    top: 260px;
+  }
+
+  .nav {
+    gap: 8px 14px;
+    flex-wrap: wrap;
+  }
+
+  .gallery-dropdown {
+    min-width: 132px;
+  }
+
+  .gallery-dropdown a {
+    font-size: 18px;
+  }
+
+  .home-bird-link,
+  .home-bird-link img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .home-tagline {
+    margin-top: 120px;
+  }
+
+  .home .home-tagline {
+    margin-top: 0;
+  }
+
+  .paintings-grid,
+  .ceramics-grid,
+  .study-grid,
+  .florals-grid,
+  .whimsy-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+  }
+
+  .gallery .paintings-grid,
+  .gallery .ceramics-grid,
+  .gallery .whimsy-grid {
+    column-gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 36px;
+  }
+
+  .gallery .ceramics-grid {
+    margin-bottom: 72px;
+  }
+
+  .gallery .art-card img,
+  .gallery .carousel,
+  .gallery .carousel img {
+    width: 100%;
+  }
+
+  .gallery .art-card img {
+    height: auto;
+    margin: 9px 0 0;
+  }
+
+  .gallery .paintings-grid .art-card img,
+  .gallery .ceramics-grid .art-card img,
+  .gallery .whimsy-grid .art-card img {
+    aspect-ratio: 243 / 320;
+    object-fit: cover;
+  }
+
+  .gallery .carousel img {
+    aspect-ratio: 330 / 223;
+    height: auto;
+  }
+
+  .gallery .art-card p {
+    margin: 0;
+    width: 100%;
+  }
+}
