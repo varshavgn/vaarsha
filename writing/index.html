@@ -11,7 +11,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="../style.css?v=2026072001" />
+    <link rel="stylesheet" href="../style.css?v=2026080208" />
   </head>
   <body>
     <main>
@@ -42,6 +42,7 @@
           <span class="stripe stripe-brown"></span>
           <span class="stripe stripe-coral"></span>
         </div>
+        <div class="writing-locked-content" aria-hidden="true">
         <article class="writing-preview">
           <h3>
             <a href="george-costanza/">
@@ -156,6 +157,18 @@
             </details>
           </div>
         </article>
+        </div>
+        <form class="writing-password-panel" aria-label="Writing password preview">
+          <img
+            class="secret-seagull"
+            src="../logo/secret%20seagull.webp"
+            alt="For seagull eyes only"
+          />
+          <label for="writing-password">for seagull eyes only</label>
+          <input id="writing-password" type="password" />
+          <button type="submit">enter</button>
+          <p class="writing-password-error" aria-live="polite"></p>
+        </form>
       </section>
     </main>
     <script>
@@ -167,6 +180,35 @@
             details.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         });
+      });
+
+      const passwordPanel = document.querySelector(".writing-password-panel");
+      const lockedContent = document.querySelector(".writing-locked-content");
+      const passwordInput = document.getElementById("writing-password");
+      const passwordError = document.querySelector(".writing-password-error");
+      const unlockWriting = () => {
+        lockedContent.classList.add("is-unlocked");
+        lockedContent.removeAttribute("aria-hidden");
+        passwordPanel.classList.add("is-unlocked");
+        passwordPanel.setAttribute("aria-hidden", "true");
+      };
+
+      if (localStorage.getItem("writingUnlocked") === "true") {
+        unlockWriting();
+      }
+
+      passwordPanel.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (passwordInput.value.trim().toLowerCase() === "seagull") {
+          localStorage.setItem("writingUnlocked", "true");
+          unlockWriting();
+          return;
+        }
+
+        passwordError.textContent = "try again";
+        passwordInput.value = "";
+        passwordInput.focus();
       });
     </script>
   </body>
