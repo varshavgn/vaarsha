@@ -124,7 +124,7 @@ main {
   display: grid;
   gap: 4px;
   left: 0;
-  min-width: 150px;
+  min-width: 180px;
   opacity: 0;
   padding: 4px 0 8px;
   pointer-events: none;
@@ -135,11 +135,11 @@ main {
   z-index: 1003;
 }
 
-.gallery-dropdown a {
+.nav .gallery-dropdown a {
   color: var(--ink);
   font-size: 20px;
   line-height: 1.2;
-  padding: 2px 0;
+  padding: 2px 10px 2px 12px;
   white-space: nowrap;
 }
 
@@ -188,6 +188,13 @@ main {
   position: absolute;
   right: 92px;
   top: 512px;
+}
+
+.home-title a:hover,
+.home-title a:focus-visible,
+.home-tagline a:hover,
+.home-tagline a:focus-visible {
+  color: var(--teal);
 }
 
 .stripe-stack {
@@ -316,10 +323,11 @@ main {
 }
 
 .florals-grid {
-  gap: 59.5px;
-  grid-template-columns: repeat(3, 330px);
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: space-between;
   left: 80px;
   top: 2180px;
+  width: calc(100% - 171px);
 }
 
 .whimsy-grid {
@@ -719,11 +727,6 @@ main {
     min-height: auto;
   }
 
-  .florals-grid {
-    grid-template-columns: repeat(auto-fit, 330px);
-    justify-content: space-between;
-    width: calc(100% - 171px);
-  }
 }
 
 @media (min-width: 981px) and (max-width: 1100px) {
@@ -1015,10 +1018,6 @@ main {
     margin-top: 28px;
   }
 
-  .florals-grid {
-    grid-template-columns: repeat(auto-fit, 330px);
-  }
-
   .gallery .florals-label {
     margin-top: 72px;
   }
@@ -1213,14 +1212,14 @@ main {
   .me-intro-frame {
     left: 28px;
     top: 260px;
-    width: min(calc(52vw - 56px), 440px);
+    width: min(calc((100vw - 84px) / 2), 440px);
   }
 
   .portrait-frame {
     left: auto;
     right: 28px;
     top: 260px;
-    width: min(40vw, 420px);
+    width: min(calc((100vw - 84px) / 2), 420px);
   }
 
   .me-intro-text {
@@ -1228,7 +1227,7 @@ main {
     left: 28px;
     line-height: 1.24;
     top: 360px;
-    width: min(calc(52vw - 56px), 440px);
+    width: min(calc((100vw - 84px) / 2), 440px);
   }
 
   .me-intro-text p {
@@ -1237,6 +1236,35 @@ main {
 }
 
 @media (min-width: 561px) and (max-width: 699px) {
+  .me {
+    min-height: 780px;
+  }
+
+  .me-intro-frame {
+    left: 20px;
+    top: 250px;
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .portrait-frame {
+    left: auto;
+    right: 20px;
+    top: 250px;
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .me-intro-text {
+    font-size: 15px;
+    left: 20px;
+    line-height: 1.2;
+    top: calc(250px + (((100vw - 60px) / 2) * 0.17) + 24px);
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .me-intro-text p {
+    margin-bottom: 10px;
+  }
+
   .home .home-title,
   .home .home-tagline {
     font-size: clamp(30px, 5vw, 34px);
@@ -1402,20 +1430,26 @@ main {
   .me-intro-frame {
     left: 20px;
     top: 250px;
-    width: calc(100% - 40px);
+    width: calc((100vw - 60px) / 2);
   }
 
   .me-intro-text {
+    font-size: 12.5px;
     left: 20px;
-    top: calc(350px + (100vw - 40px) + 48px);
-    width: calc(100% - 40px);
+    line-height: 1.16;
+    top: calc(250px + (((100vw - 60px) / 2) * 0.17) + 20px);
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .me-intro-text p {
+    margin-bottom: 8px;
   }
 
   .portrait-frame {
-    left: 20px;
+    left: auto;
     right: 20px;
-    top: 350px;
-    width: calc(100% - 40px);
+    top: 250px;
+    width: calc((100vw - 60px) / 2);
   }
 
   .shop .construction-logo {
@@ -1425,14 +1459,6 @@ main {
   .nav {
     gap: 8px 14px;
     flex-wrap: wrap;
-  }
-
-  .gallery-dropdown {
-    min-width: 132px;
-  }
-
-  .gallery-dropdown a {
-    font-size: 18px;
   }
 
   .home-bird-link,
@@ -1460,6 +1486,7 @@ main {
 
   .gallery .paintings-grid,
   .gallery .ceramics-grid,
+  .gallery .florals-grid,
   .gallery .whimsy-grid {
     column-gap: 14px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1483,6 +1510,7 @@ main {
 
   .gallery .paintings-grid .art-card img,
   .gallery .ceramics-grid .art-card img,
+  .gallery .florals-grid .art-card img,
   .gallery .whimsy-grid .art-card img {
     aspect-ratio: 243 / 320;
     object-fit: cover;
@@ -1496,5 +1524,36 @@ main {
   .gallery .art-card p {
     margin: 0;
     width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 560px) {
+  .me {
+    min-height: 760px;
+  }
+
+  .me-intro-frame {
+    left: 20px;
+    top: 250px;
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .portrait-frame {
+    left: auto;
+    right: 20px;
+    top: 250px;
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .me-intro-text {
+    font-size: 14px;
+    left: 20px;
+    line-height: 1.18;
+    top: calc(250px + (((100vw - 60px) / 2) * 0.17) + 22px);
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .me-intro-text p {
+    margin-bottom: 9px;
   }
 }

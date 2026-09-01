@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gallery | vaarsha</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
     <link
       rel="preload"
       href="../Elms_Sans/fonts%20compressed/ElmsSans-Regular.woff2"
@@ -11,7 +14,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="../style.css?v=2026080208" />
+    <link rel="stylesheet" href="../style.css?v=2026090102" />
   </head>
   <body>
     <main>
@@ -139,62 +142,54 @@
         </div>
         <h3 class="section-label florals-label" id="florals">florals</h3>
         <div class="art-grid florals-grid">
-          <article class="art-card carousel-card">
-            <div
-              class="carousel"
-              data-carousel
-              data-images="florals/red%20vase%20june%202026/1.webp,florals/red%20vase%20june%202026/2.webp,florals/red%20vase%20june%202026/3.webp"
-            >
-              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
-                ‹
-              </button>
-              <img
-                src="florals/red%20vase%20june%202026/1.webp"
-                alt="Red vase floral arrangement"
-                data-carousel-image
-              />
-              <button class="carousel-button next" type="button" aria-label="Next floral image">
-                ›
-              </button>
-            </div>
+          <article class="art-card">
+            <img
+              src="florals/onam%202026.webp"
+              alt="Onam 2026 floral arrangement"
+            />
+            <p><span>onam 2026</span></p>
           </article>
-          <article class="art-card carousel-card">
-            <div
-              class="carousel"
-              data-carousel
-              data-images="florals/blue%20vase%20june%202026/1.webp,florals/blue%20vase%20june%202026/2.webp,florals/blue%20vase%20june%202026/3.webp,florals/blue%20vase%20june%202026/4.webp,florals/blue%20vase%20june%202026/5.webp"
-            >
-              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
-                ‹
-              </button>
-              <img
-                src="florals/blue%20vase%20june%202026/1.webp"
-                alt="Blue vase floral arrangement"
-                data-carousel-image
-              />
-              <button class="carousel-button next" type="button" aria-label="Next floral image">
-                ›
-              </button>
-            </div>
+          <article class="art-card">
+            <img
+              src="florals/white%20grapes.webp?v=2026090102"
+              alt="White grapes floral arrangement"
+            />
+            <p><span>grapes</span></p>
           </article>
-          <article class="art-card carousel-card">
-            <div
-              class="carousel"
-              data-carousel
-              data-images="florals/baby%20bouquet%20june%202026/1.webp,florals/baby%20bouquet%20june%202026/2.webp"
-            >
-              <button class="carousel-button prev" type="button" aria-label="Previous floral image">
-                ‹
-              </button>
-              <img
-                src="florals/baby%20bouquet%20june%202026/1.webp"
-                alt="Baby bouquet floral arrangement"
-                data-carousel-image
-              />
-              <button class="carousel-button next" type="button" aria-label="Next floral image">
-                ›
-              </button>
-            </div>
+          <article class="art-card">
+            <img
+              src="florals/stems.webp?v=2026090102"
+              alt="Stems floral arrangement"
+            />
+            <p><span>stems</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="florals/hydrangeas.webp?v=2026090102"
+              alt="Hydrangeas floral arrangement"
+            />
+            <p><span>hydrangeas</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="florals/bouquet%20june%202026.webp"
+              alt="Bouquet June 2026 floral arrangement"
+            />
+            <p><span>pink</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="florals/marigolds%20june%202026.webp"
+              alt="Marigolds June 2026 floral arrangement"
+            />
+            <p><span>marigolds</span></p>
+          </article>
+          <article class="art-card">
+            <img
+              src="florals/sunflower%20june%202026.webp"
+              alt="Sunflower June 2026 floral arrangement"
+            />
+            <p><span>sunflower</span></p>
           </article>
         </div>
         <h3 class="section-label whimsy-label" id="whimsy">crafts &amp; whimsy</h3>
@@ -230,20 +225,5 @@
         </div>
       </section>
     </main>
-    <script>
-      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-        const image = carousel.querySelector("[data-carousel-image]");
-        const images = carousel.dataset.images.split(",");
-        let index = 0;
-
-        const showImage = (direction) => {
-          index = (index + direction + images.length) % images.length;
-          image.src = images[index];
-        };
-
-        carousel.querySelector(".prev").addEventListener("click", () => showImage(-1));
-        carousel.querySelector(".next").addEventListener("click", () => showImage(1));
-      });
-    </script>
   </body>
 </html>
