@@ -271,6 +271,27 @@ main {
   width: calc(100% - 171px);
 }
 
+.gallery-stripes,
+.shop-stripes,
+.writing-stripes,
+.me-stripes {
+  gap: 3px;
+}
+
+.gallery-stripes .stripe,
+.shop-stripes .stripe,
+.writing-stripes .stripe,
+.me-stripes .stripe {
+  height: 8px;
+}
+
+.gallery-stripes .stripe-brown,
+.shop-stripes .stripe-brown,
+.writing-stripes .stripe-brown,
+.me-stripes .stripe-brown {
+  height: 7px;
+}
+
 .section-label {
   font-size: 36px;
   left: 80px;
@@ -301,7 +322,7 @@ main {
 
 .paintings-grid {
   grid-template-columns: repeat(auto-fit, 260px);
-  justify-content: space-between;
+  justify-content: start;
   left: 80px;
   top: 352px;
   width: calc(100% - 171px);
@@ -316,7 +337,7 @@ main {
 
 .ceramics-grid {
   grid-template-columns: repeat(auto-fit, 260px);
-  justify-content: space-between;
+  justify-content: start;
   left: 80px;
   top: 1698px;
   width: calc(100% - 171px);
@@ -324,7 +345,7 @@ main {
 
 .florals-grid {
   grid-template-columns: repeat(auto-fit, 260px);
-  justify-content: space-between;
+  justify-content: start;
   left: 80px;
   top: 2180px;
   width: calc(100% - 171px);
@@ -332,7 +353,7 @@ main {
 
 .whimsy-grid {
   grid-template-columns: repeat(auto-fit, 260px);
-  justify-content: space-between;
+  justify-content: start;
   left: 80px;
   top: 2734px;
   width: calc(100% - 171px);
@@ -370,6 +391,165 @@ main {
   margin: 9px 0 0;
   object-fit: cover;
   width: 243px;
+}
+
+.gallery .art-card img {
+  cursor: zoom-in;
+  transition: filter 160ms ease, outline-color 160ms ease;
+}
+
+.gallery .art-card img:hover {
+  filter: brightness(0.92);
+}
+
+.gallery .art-card img:focus-visible {
+  outline: none;
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.secret-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 80px 24px;
+  position: relative;
+  text-align: center;
+}
+
+.secret-page-seagull {
+  height: auto;
+  max-width: 320px;
+  width: min(62vw, 320px);
+}
+
+.secret-page h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin: 30px 0 8px;
+}
+
+.secret-page p {
+  font-size: clamp(18px, 3vw, 24px);
+  margin: 0;
+}
+
+.secret-page-home {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.secret-page-home img {
+  display: block;
+  height: 130px;
+  object-fit: contain;
+  width: 130px;
+}
+
+.gallery-lightbox {
+  background: transparent;
+  border: 0;
+  height: 100%;
+  margin: auto;
+  max-height: none;
+  max-width: none;
+  padding: 24px;
+  width: 100%;
+}
+
+.gallery-lightbox::backdrop {
+  background: rgb(255 253 242 / 34%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gallery-lightbox-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  max-width: min(92vw, 1100px);
+  position: relative;
+}
+
+.gallery-lightbox-image {
+  background: var(--teal);
+  display: block;
+  max-height: calc(100vh - 150px);
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.gallery-lightbox-figure {
+  max-width: 100%;
+  width: fit-content;
+}
+
+.gallery-lightbox-caption {
+  background: var(--cream);
+  box-sizing: border-box;
+  color: var(--ink);
+  margin: 0;
+  padding: 10px 12px 12px 14px;
+  text-align: right;
+  width: 100%;
+}
+
+.gallery-lightbox-caption span {
+  display: block;
+}
+
+.gallery-lightbox-close {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 140px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 140px;
+  z-index: 1;
+}
+
+.gallery-lightbox-close img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.gallery-lightbox-close:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .gallery-lightbox {
+    padding: 16px;
+  }
+
+  .gallery-lightbox-image {
+    max-height: calc(100vh - 130px);
+  }
+
+  .gallery-lightbox-close {
+    height: 100px;
+    right: -4px;
+    top: -4px;
+    width: 100px;
+  }
 }
 
 .art-card.landscape-card img,
@@ -999,7 +1179,7 @@ main {
   .florals-grid,
   .whimsy-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
-    justify-content: space-between;
+    justify-content: start;
     margin-top: 28px;
     row-gap: 48px;
     width: 100%;
@@ -1555,5 +1735,145 @@ main {
 
   .me-intro-text p {
     margin-bottom: 9px;
+  }
+}
+
+.home-secret-link {
+  height: 160px;
+  left: 50%;
+  position: absolute;
+  top: 459px;
+  transform: translateX(-50%) rotate(180deg);
+  width: 160px;
+  z-index: 2;
+}
+
+.home-secret-link .bird-bottom {
+  height: 100%;
+  left: auto;
+  margin: 0;
+  position: static;
+  top: auto;
+  transform: none;
+  width: 100%;
+}
+
+.home-secret-link:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 4px;
+}
+
+@media (max-width: 560px) {
+  .home-secret-link {
+    height: 92px;
+    top: 428px;
+    width: 92px;
+  }
+}
+
+/* Header bands sit directly below navigation when no page title is shown. */
+.gallery-stripes,
+.shop-stripes,
+.writing-stripes {
+  top: 112px;
+}
+
+.gallery .paintings-label {
+  margin-top: 150px;
+}
+
+.shop .construction-logo {
+  top: 170px;
+}
+
+.writing-index {
+  padding-top: 205px;
+}
+
+.writing-password-panel {
+  top: 302px;
+}
+
+@media (max-width: 980px) {
+  .gallery .paintings-label {
+    top: 190px;
+  }
+
+  .gallery .art-card {
+    min-height: 0;
+  }
+
+  .gallery .paintings-grid,
+  .gallery .ceramics-grid,
+  .gallery .florals-grid,
+  .gallery .whimsy-grid {
+    row-gap: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery .paintings-grid,
+  .gallery .ceramics-grid,
+  .gallery .florals-grid,
+  .gallery .whimsy-grid {
+    row-gap: 20px;
+  }
+}
+
+/* Fluid gallery columns fill each row while preserving a steady visual gap. */
+.gallery .paintings-grid,
+.gallery .ceramics-grid,
+.gallery .florals-grid,
+.gallery .whimsy-grid {
+  column-gap: clamp(18px, 2.2vw, 28px);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-content: stretch;
+}
+
+.gallery .art-card,
+.gallery .art-card img,
+.gallery .art-card p {
+  width: 100%;
+}
+
+.gallery .art-card img {
+  aspect-ratio: 243 / 320;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery .tiger-print-card {
+  grid-column: span 2;
+}
+
+.gallery .whimsy-grid .tiger-print-card img {
+  aspect-ratio: 79 / 50;
+}
+
+@media (max-width: 560px) {
+  .gallery .paintings-grid,
+  .gallery .ceramics-grid,
+  .gallery .florals-grid,
+  .gallery .whimsy-grid {
+    column-gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 751px) {
+  .gallery .tiger-print-card {
+    order: 1;
+  }
+
+  .gallery .treason-card,
+  .gallery .birds-card {
+    order: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav .gallery-dropdown a {
+    font-size: 14px;
   }
 }
